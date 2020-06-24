@@ -1,0 +1,5 @@
+{
+    "appService.showBuildDuringDeployPrompt": false,
+    "appService.deploySubpath": ".",
+    "appService.defaultWebAppToDeploy": "/subscriptions/07a9ff04-41f9-4467-8ee1-ec023adc9c06/resourceGroups/rg-demos/providers/Microsoft.Web/sites/cptams01"
+}
