@@ -1,7 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var tokens = require('../tokens.js');
-var graph = require('../graph.js');
 var jwtams = require('../jwt.ams.js');
 
 /* GET /video */
@@ -34,7 +32,8 @@ router.get('/',
         try {
           // Assign all needed Streaming parameter to params
           params.stream.accessToken = accessToken;
-          params.stream.streamURL = "https://cptmediaservices-cptmedia01-euno.streaming.media.azure.net/66d71cd0-0946-4726-b2c5-30dce4b8eb00/cptvideo01.ism/manifest(encryption=cbc)";
+          params.stream.streamURLEncoded = encodeURIComponent(process.env.MEDIASERVICE_URL);
+          params.stream.streamURL = process.env.MEDIASERVICE_URL;
           params.stream.posterURL = "images/sendepause.jpg";
           params.stream.payload = JSON.stringify(result.payload);
         } catch (err) {

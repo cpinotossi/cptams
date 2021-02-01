@@ -12,7 +12,7 @@
      crossorigin="anonymous">
    <link rel='stylesheet' href='/stylesheets/style.css' />
    <!-- Player Code -->  
-   <link href="//amp.azure.net/libs/amp/2.3.5/skins/amp-default/azuremediaplayer.min.css" rel="stylesheet">
+   <!--link href="//amp.azure.net/libs/amp/2.3.5/skins/amp-default/azuremediaplayer.min.css" rel="stylesheet"-->>
    <!--link rel='stylesheet' href='https://unpkg.com/plyr@3/dist/plyr.css'/-->
  </head>
 
@@ -30,20 +30,12 @@
              <a href="/" class="nav-link{{#if active.home}} active{{/if}}">Home</a>
            </li>
            {{#if user}}
-             <li class="nav-item" data-turbolinks="false">
-               <a href="/calendar" class="nav-link{{#if active.calendar}} active{{/if}}">Calendar</a>
-             </li>
               <li class="nav-item" data-turbolinks="false">
                <a href="/video" class="nav-link{{#if active.video}} active{{/if}}">Video</a>
              </li>
            {{/if}}
          </ul>
          <ul class="navbar-nav justify-content-end">
-           <li class="nav-item">
-             <a class="nav-link" href="https://developer.microsoft.com/graph/docs/concepts/overview" target="_blank">
-               <i class="fas fa-external-link-alt mr-1"></i>Docs
-             </a>
-           </li>
            {{#if user}}
              <li class="nav-item dropdown">
                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"

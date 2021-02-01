@@ -1,5 +1,5 @@
 {
-  "name": "graph-tutorial",
+  "name": "ams-demo",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -16,11 +16,32 @@
     "hbs": "^4.1.1",
     "http-errors": "~1.6.3",
     "isomorphic-fetch": "^2.2.1",
-    "jwt-decode": "^2.2.0",
     "jwt-simple": "^0.5.3",
     "moment": "^2.27.0",
     "morgan": "~1.9.1",
     "passport-azure-ad": "^4.2.1",
     "simple-oauth2": "^3.4.0"
-  }
+  },
+  "description": "",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cpinotossi/cptams.git"
+  },
+  "keywords": [
+    "Azure",
+    "Media",
+    "Services",
+    "Demo",
+    "with",
+    "AES",
+    "Key",
+    "Encyption"
+  ],
+  "author": "cpinotossi@web.de",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cpinotossi/cptams/issues"
+  },
+  "homepage": "https://github.com/cpinotossi/cptams#readme"
 }

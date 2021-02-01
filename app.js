@@ -94,8 +94,7 @@ var usersRouter = require('./routes/users');
 
 //--- add new route for auth start -------------------------------------------------
 var authRouter = require('./routes/auth');
-//--- add new route for auth end -------------------------------------------------
-var calendarRouter = require('./routes/calendar');
+
 var videoRouter = require('./routes/video');
 var app = express();
 
@@ -135,15 +134,6 @@ app.use(function(req, res, next) {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-// --- Calendar view start --------------------------------------
-var hbs = require('hbs');
-var moment = require('moment');
-// Helper to format date/time sent by Graph
-hbs.registerHelper('eventDateTime', function(dateTime){
-  return moment(dateTime).format('M/D/YY h:mm A');
-});
-// --- Calendar view end --------------------------------------
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -168,7 +158,6 @@ app.use('/', indexRouter);
 //--- assign new route start ----
 app.use('/auth', authRouter);
 //--- assign new route end ----
-app.use('/calendar', calendarRouter);
 app.use('/video', videoRouter);
 app.use('/users', usersRouter);
 

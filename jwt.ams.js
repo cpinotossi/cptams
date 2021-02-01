@@ -1,6 +1,4 @@
 const jwtSimple = require('jwt-simple');
-const jwtDecode = require('jwt-decode');
-let dotenv = require('dotenv').config();
 
 module.exports = {
   //Import Modules

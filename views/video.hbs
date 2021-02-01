@@ -1,9 +1,8 @@
 
 <div class="jumbotron">
-	<iframe src="//aka.ms/ampembed?url=https%3A%2F%2Fcptmediaservices-cptmedia01-euno.streaming.media.azure.net%2F66d71cd0-0946-4726-b2c5-30dce4b8eb00%2Fcptvideo01.ism%2Fmanifest(encryption%3Dcbc)&format=dash&autoplay=false&aes=true&aestoken={{stream.accessToken}}" name="azuremediaplayer" scrolling="no" frameborder="no" align="center" height="280px" width="500px" allowfullscreen></iframe>
-	<!--video id="azuremediaplayer" class="azuremediaplayer amp-default-skin amp-big-play-centered" tabindex="0"></video-->
+	<iframe src="//aka.ms/azuremediaplayer?url={{stream.streamURLEncoded}}&aes=true&aestoken={{stream.accessToken}}" name="azuremediaplayer" scrolling="no" frameborder="no" align="center" height="280px" width="500px" allowfullscreen></iframe>
 </div>
-<div class="jumbotron">
+<div class="jumbotron" style="word-wrap: break-word;">
 	<ul>
 	<li>jwt: {{stream.accessToken}}</li>
 	<li>payload: {{stream.payload}}</li>
@@ -11,30 +10,6 @@
 	</ul>
 </div>
 
-<!-- Player Code -->
-<!--
-  <script src="//amp.azure.net/libs/amp/2.3.5/azuremediaplayer.min.js"></script>       
 <script>
-var myOptions = {
-	"nativeControlsForTouch": false,
-	controls: true,
-	autoplay: false,
-	width: "500",
-	height: "281",
-	poster: "{{stream.posterURL}}"
-}
-myPlayer = amp("azuremediaplayer", myOptions);
-myPlayer.src([
-        {
-                "src": "{{stream.streamURL}}",
-                "type": "application/vnd.ms-sstr+xml",
-                "protectionInfo": [
-                        {
-                                "type": "AES",
-                                "authenticationToken": "{{stream.accessToken}}"
-                        }
-                ]
-        }
-]);
+	console.log(window.frames[0].src);
 </script>
--->
