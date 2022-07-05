@@ -1,0 +1,122 @@
+{
+    "name": "ulsape41",
+    "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/RG-VM-ULSAPE41-GWC/providers/Microsoft.Compute/virtualMachines/ulsape41",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "germanywestcentral",
+    "tags": {
+        "CostCenter": "28007510"
+    },
+    "properties": {
+        "vmId": "6fc689a4-8048-4512-9a9d-09f6eaaf96cc",
+        "hardwareProfile": {
+            "vmSize": "Standard_E8ds_v4"
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "RedHat",
+                "offer": "RHEL-SAP-HA",
+                "sku": "81sapha-gen2",
+                "version": "latest"
+            },
+            "osDisk": {
+                "osType": "Linux",
+                "name": "ulsape41-osdisk",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "managedDisk": {
+                    "storageAccountType": "Premium_LRS",
+                    "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/RG-VM-ULSAPE41-GWC/providers/Microsoft.Compute/disks/ulsape41-osdisk"
+                },
+                "diskSizeGB": 64
+            },
+            "dataDisks": [
+                {
+                    "lun": 0,
+                    "name": "ulsape41_disk2_74d5ab9f31d7470998ba98f2a2ee0830",
+                    "createOption": "Empty",
+                    "caching": "ReadOnly",
+                    "managedDisk": {
+                        "storageAccountType": "Premium_LRS",
+                        "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/RG-VM-ULSAPE41-GWC/providers/Microsoft.Compute/disks/ulsape41_disk2_74d5ab9f31d7470998ba98f2a2ee0830"
+                    },
+                    "diskSizeGB": 512
+                }
+            ]
+        },
+        "osProfile": {
+            "computerName": "ulsape41",
+            "adminUsername": "azureuser",
+            "linuxConfiguration": {
+                "disablePasswordAuthentication": false
+            },
+            "secrets": []
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/rg-vm-ulsape41-gwc/providers/Microsoft.Network/networkInterfaces/ulsape41-nic"
+                }
+            ]
+        },
+        "diagnosticsProfile": {
+            "bootDiagnostics": {
+                "enabled": true,
+                "storageUri": "https://stacsape41.blob.core.windows.net/"
+            }
+        },
+        "provisioningState": "Succeeded"
+    },
+    "resources": [
+        {
+            "name": "CustomScript",
+            "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/RG-VM-ULSAPE41-GWC/providers/Microsoft.Compute/virtualMachines/ulsape41/extensions/CustomScript",
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "location": "germanywestcentral",
+            "tags": {
+                "CostCenter": "28007510"
+            },
+            "properties": {
+                "autoUpgradeMinorVersion": true,
+                "provisioningState": "Succeeded",
+                "publisher": "Microsoft.Azure.Extensions",
+                "type": "CustomScript",
+                "typeHandlerVersion": "2.0",
+                "settings": {
+                    "fileUris": [
+                        "https://stdekrasapvm.blob.core.windows.net/constdekrasapvm/diskConfig.sh"
+                    ],
+                    "commandToExecute": "sh diskConfig.sh -luns '0' -names 'sapexe' -paths '/home/e41adm,/sapmnt/E41,/usr/sap,/usr/sap/E41,/usr/sap/trans,/usr/sap/E41/SUM' -sizes '1,2,1,5,20,30'"
+                }
+            }
+        },
+        {
+            "name": "DependencyAgentLinux",
+            "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/RG-VM-ULSAPE41-GWC/providers/Microsoft.Compute/virtualMachines/ulsape41/extensions/DependencyAgentLinux",
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "location": "germanywestcentral",
+            "properties": {
+                "autoUpgradeMinorVersion": true,
+                "provisioningState": "Succeeded",
+                "publisher": "Microsoft.Azure.Monitoring.DependencyAgent",
+                "type": "DependencyAgentLinux",
+                "typeHandlerVersion": "9.10"
+            }
+        },
+        {
+            "name": "OmsAgentForLinux",
+            "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/RG-VM-ULSAPE41-GWC/providers/Microsoft.Compute/virtualMachines/ulsape41/extensions/OmsAgentForLinux",
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "location": "germanywestcentral",
+            "properties": {
+                "autoUpgradeMinorVersion": true,
+                "provisioningState": "Succeeded",
+                "publisher": "Microsoft.EnterpriseCloud.Monitoring",
+                "type": "OmsAgentForLinux",
+                "typeHandlerVersion": "1.0",
+                "settings": {
+                    "workspaceId": "0562c3d6-8a59-45e1-bf32-c0fb03517e5d"
+                }
+            }
+        }
+    ]
+}

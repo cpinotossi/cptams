@@ -1,0 +1,210 @@
+{
+    "name": "ulhnae41",
+    "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/RG-VM-ULHNAE41-GWC/providers/Microsoft.Compute/virtualMachines/ulhnae41",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "germanywestcentral",
+    "tags": {
+        "CostCenter": "28007510"
+    },
+    "properties": {
+        "vmId": "d052ad99-3713-430b-a198-3134a4fb8958",
+        "hardwareProfile": {
+            "vmSize": "Standard_M64ls"
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "RedHat",
+                "offer": "RHEL-SAP-HA",
+                "sku": "81sapha-gen2",
+                "version": "latest"
+            },
+            "osDisk": {
+                "osType": "Linux",
+                "name": "ulhnae41-osdisk",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "managedDisk": {
+                    "storageAccountType": "Premium_LRS",
+                    "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/RG-VM-ULHNAE41-GWC/providers/Microsoft.Compute/disks/ulhnae41-osdisk"
+                },
+                "diskSizeGB": 64
+            },
+            "dataDisks": [
+                {
+                    "lun": 0,
+                    "name": "ulhnae41_disk2_e9076706c1b243faa35728b7beae8e05",
+                    "createOption": "Empty",
+                    "caching": "ReadOnly",
+                    "managedDisk": {
+                        "storageAccountType": "Premium_LRS",
+                        "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/RG-VM-ULHNAE41-GWC/providers/Microsoft.Compute/disks/ulhnae41_disk2_e9076706c1b243faa35728b7beae8e05"
+                    },
+                    "diskSizeGB": 64
+                },
+                {
+                    "lun": 1,
+                    "name": "ulhnae41_disk3_b1af7cad69a34038918cb644b221cd06",
+                    "createOption": "Empty",
+                    "caching": "ReadOnly",
+                    "managedDisk": {
+                        "storageAccountType": "Premium_LRS",
+                        "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/RG-VM-ULHNAE41-GWC/providers/Microsoft.Compute/disks/ulhnae41_disk3_b1af7cad69a34038918cb644b221cd06"
+                    },
+                    "diskSizeGB": 128
+                },
+                {
+                    "lun": 2,
+                    "name": "ulhnae41_disk4_5d48a73679dd4ba3948f8902f74a4ace",
+                    "createOption": "Empty",
+                    "caching": "ReadOnly",
+                    "managedDisk": {
+                        "storageAccountType": "Premium_LRS",
+                        "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/RG-VM-ULHNAE41-GWC/providers/Microsoft.Compute/disks/ulhnae41_disk4_5d48a73679dd4ba3948f8902f74a4ace"
+                    },
+                    "diskSizeGB": 128
+                },
+                {
+                    "lun": 3,
+                    "name": "ulhnae41_disk5_e36a38ce89174ea4939383f224dcf477",
+                    "createOption": "Empty",
+                    "caching": "ReadOnly",
+                    "managedDisk": {
+                        "storageAccountType": "Premium_LRS",
+                        "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/RG-VM-ULHNAE41-GWC/providers/Microsoft.Compute/disks/ulhnae41_disk5_e36a38ce89174ea4939383f224dcf477"
+                    },
+                    "diskSizeGB": 128
+                },
+                {
+                    "lun": 4,
+                    "name": "ulhnae41_disk6_4aecccb50dae4b27964765645ebe5927",
+                    "createOption": "Empty",
+                    "caching": "ReadOnly",
+                    "managedDisk": {
+                        "storageAccountType": "Premium_LRS",
+                        "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/RG-VM-ULHNAE41-GWC/providers/Microsoft.Compute/disks/ulhnae41_disk6_4aecccb50dae4b27964765645ebe5927"
+                    },
+                    "diskSizeGB": 128
+                },
+                {
+                    "lun": 5,
+                    "name": "ulhnae41_disk7_7e25de7c97ba4cadbb63153cfb0f8eec",
+                    "createOption": "Empty",
+                    "caching": "None",
+                    "managedDisk": {
+                        "storageAccountType": "Premium_LRS",
+                        "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/RG-VM-ULHNAE41-GWC/providers/Microsoft.Compute/disks/ulhnae41_disk7_7e25de7c97ba4cadbb63153cfb0f8eec"
+                    },
+                    "diskSizeGB": 128
+                },
+                {
+                    "lun": 6,
+                    "name": "ulhnae41_disk8_8d40a426411742dcabd9a10d67f6ae17",
+                    "createOption": "Empty",
+                    "caching": "None",
+                    "managedDisk": {
+                        "storageAccountType": "Premium_LRS",
+                        "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/RG-VM-ULHNAE41-GWC/providers/Microsoft.Compute/disks/ulhnae41_disk8_8d40a426411742dcabd9a10d67f6ae17"
+                    },
+                    "diskSizeGB": 128
+                },
+                {
+                    "lun": 7,
+                    "name": "ulhnae41_disk9_a0eb376d3fa040d783ae3758bc0e213c",
+                    "createOption": "Empty",
+                    "caching": "None",
+                    "managedDisk": {
+                        "storageAccountType": "Premium_LRS",
+                        "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/RG-VM-ULHNAE41-GWC/providers/Microsoft.Compute/disks/ulhnae41_disk9_a0eb376d3fa040d783ae3758bc0e213c"
+                    },
+                    "diskSizeGB": 128
+                },
+                {
+                    "lun": 8,
+                    "name": "ulhnae41_disk10_05e4c21000f849a6ac4d8f8c9ee516e2",
+                    "createOption": "Empty",
+                    "caching": "ReadOnly",
+                    "managedDisk": {
+                        "storageAccountType": "Premium_LRS",
+                        "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/RG-VM-ULHNAE41-GWC/providers/Microsoft.Compute/disks/ulhnae41_disk10_05e4c21000f849a6ac4d8f8c9ee516e2"
+                    },
+                    "diskSizeGB": 1024
+                }
+            ]
+        },
+        "osProfile": {
+            "computerName": "ulhnae41",
+            "adminUsername": "azureuser",
+            "linuxConfiguration": {
+                "disablePasswordAuthentication": false
+            },
+            "secrets": []
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/rg-vm-ulhnae41-gwc/providers/Microsoft.Network/networkInterfaces/ulhnae41-nic"
+                }
+            ]
+        },
+        "diagnosticsProfile": {
+            "bootDiagnostics": {
+                "enabled": true,
+                "storageUri": "https://stachnae41.blob.core.windows.net/"
+            }
+        },
+        "provisioningState": "Succeeded"
+    },
+    "resources": [
+        {
+            "name": "CustomScript",
+            "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/RG-VM-ULHNAE41-GWC/providers/Microsoft.Compute/virtualMachines/ulhnae41/extensions/CustomScript",
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "location": "germanywestcentral",
+            "tags": {
+                "CostCenter": "28007510"
+            },
+            "properties": {
+                "autoUpgradeMinorVersion": true,
+                "provisioningState": "Succeeded",
+                "publisher": "Microsoft.Azure.Extensions",
+                "type": "CustomScript",
+                "typeHandlerVersion": "2.0",
+                "settings": {
+                    "fileUris": [
+                        "https://stdekrasapvm.blob.core.windows.net/constdekrasapvm/diskConfig.sh"
+                    ],
+                    "commandToExecute": "sh diskConfig.sh -luns '0#1,2,3,4#5,6,7#8' -names 'usrsap#data#log#shared' -paths '/usr/sap#/hana/data#/hana/log#/hana/shared' -sizes '80#100#100#50'"
+                }
+            }
+        },
+        {
+            "name": "DependencyAgentLinux",
+            "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/RG-VM-ULHNAE41-GWC/providers/Microsoft.Compute/virtualMachines/ulhnae41/extensions/DependencyAgentLinux",
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "location": "germanywestcentral",
+            "properties": {
+                "autoUpgradeMinorVersion": true,
+                "provisioningState": "Succeeded",
+                "publisher": "Microsoft.Azure.Monitoring.DependencyAgent",
+                "type": "DependencyAgentLinux",
+                "typeHandlerVersion": "9.10"
+            }
+        },
+        {
+            "name": "OmsAgentForLinux",
+            "id": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/RG-VM-ULHNAE41-GWC/providers/Microsoft.Compute/virtualMachines/ulhnae41/extensions/OmsAgentForLinux",
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "location": "germanywestcentral",
+            "properties": {
+                "autoUpgradeMinorVersion": true,
+                "provisioningState": "Succeeded",
+                "publisher": "Microsoft.EnterpriseCloud.Monitoring",
+                "type": "OmsAgentForLinux",
+                "typeHandlerVersion": "1.0",
+                "settings": {
+                    "workspaceId": "0562c3d6-8a59-45e1-bf32-c0fb03517e5d"
+                }
+            }
+        }
+    ]
+}

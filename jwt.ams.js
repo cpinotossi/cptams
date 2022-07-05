@@ -1,4 +1,5 @@
 const jwtSimple = require('jwt-simple');
+require('dotenv').config();
 
 module.exports = {
   //Import Modules
@@ -17,8 +18,8 @@ module.exports = {
         let expire = currenttime + (duration * 60 * 60);
         let notbefore = currenttime - (60)
         let jwtPayload = new Object();
-        jwtPayload.iss = "cpt";
-        jwtPayload.aud = "partner1";
+        jwtPayload.iss = process.env.JWT_ISS;
+        jwtPayload.aud = process.env.JWT_AUD;
         jwtPayload.name = name;
         jwtPayload.exp = expire;
         jwtPayload.nbf = notbefore;
